@@ -140,5 +140,52 @@ extern "C" {
         ier: *mut c_int,        // ier = 0 : normal return;  ier =10 : invalid input data
     );
     
+    pub fn bispev_(
+        tx: *const c_double,
+        nx: *const c_int,
+        ty: *const c_double,
+        ny: *const c_int,
+        c: *const c_double,
+        kx: *const c_int,
+        ky: *const c_int,
+        x: *const c_double,
+        mx: *const c_int,
+        y: *const c_double,
+        my: *const c_int,
+        z: *mut c_double,
+        wrk: *const c_double,
+        lwrk: *const c_int,
+        iwrk: *const c_int,
+        kwrk: *const c_int,
+        ier: *mut c_int,
+    );
 
+    pub fn regrid_(
+        iopt: *const c_int,
+        mx: *const c_int,
+        x: *const c_double,
+        my: *const c_int,
+        y: *const c_double,
+        z: *const c_double,
+        xb: *const c_double,
+        xe: *const c_double,
+        yb: *const c_double,
+        ye: *const c_double,
+        kx: *const c_int,
+        ky: *const c_int,
+        s: *const c_double,
+        nxest: *const c_int,
+        nyest: *const c_int,
+        nx: *mut c_int,
+        tx: *mut c_double,
+        ny: *mut c_int,
+        ty: *mut c_double,
+        c: *mut c_double,
+        fp: *mut c_double,
+        wrk: *const c_double,
+        lwrk: *const c_int,
+        iwrk: *const c_int,
+        kwrk: *const c_int,
+        ier: &mut c_int,
+    );
 }
